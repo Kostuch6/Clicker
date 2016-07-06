@@ -12,10 +12,17 @@ angular.
                function StoreController(Buildings, $scope, $rootScope) {
                 
                 this.buildings = Buildings.query();
+                
+                this.buyBuilding = function(building) {
+                    building.number += 1;
+                    $rootScope.$broadcast('income-upgraded', {price: building.price}, {gpcUP: building.gpc}, {gpsUP: building.gps});
+                };
                
-               $scope.$on('current-gold-changed', function(event, args) {
-                   var currentGold = args.currentGold;
-               });
+                $scope.$on('current-gold-changed', function(event, args) {
+                    var currentGold = args.currentGold;
+                });
+               
+               
            }
         ]
 });

@@ -5,7 +5,8 @@
         "price": "20",
         "costUp": "5",
         "gpc": "1",
-        "gps": "0"
+        "gps": "0",
+        "number": "0"
     },
     {
         "name": "Miner",
@@ -13,6 +14,7 @@
         "price": "50",
         "costUp": "10",
         "gpc": "0",
-        "gps": "10"
+        "gps": "10",
+        "number": "0"
     }
 ]

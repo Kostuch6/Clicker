@@ -2,6 +2,7 @@
    <ul>
         <li ng-repeat="building in $ctrl.buildings ">
             <p>Cost: {{building.price}} </p>
-            <img ng-src="{{building.img}}">
+            <p>Number: {{building.number }} </p>
+            <div class="err"><img ng-src="{{building.img}}" style="opacity:1" ng-click="$ctrl.buyBuilding(building)"></div>
         </li>
  </div>
