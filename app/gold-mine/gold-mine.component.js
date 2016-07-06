@@ -5,35 +5,40 @@
  */
 
 angular.
-  module('goldMine').
-    component('goldMine', {
-        templateUrl: 'gold-mine/gold-mine.template.html',
-        controller: ['$scope', '$rootScope', function GoldMineController($scope, $rootScope){
-            this.currentGold = 0;
-            this.goldPerClick = 1;
-            this.goldPerSecond = 0;
-            
-            this.updateOnClick = function() {
-                this.currentGold += this.goldPerClick;
-                $rootScope.$broadcast('current-gold-changed', {currentGold: this.currentGold});
-            };
-            
-            this.updateOnSecond = function() {
-                this.currentGold += this.goldPerSecond;
-                $rootScope.$broadcast('current-gold-changed', {currentGold: this.currentGold});
-            };
-            
-            $scope.$on('GPC-upgraded', function(event, args) {
-                var GPCup = args.goldPerClick;
-                this.goldPerClick += GPCup;
-            });
-            
-            $scope.$on('GPS-upgraded', function(event, args) {
-                var GPSup = args.goldPerSecond;
-                this.goldPerSecond += GPSup;
-            });
-        }]
-        
-    });
+        module('goldMine').
+        component('goldMine', {
+            templateUrl: 'gold-mine/gold-mine.template.html',
+            controller: ['$scope', '$rootScope', '$interval', function GoldMineController($scope, $rootScope, $interval) {
+                    this.currentGold = 0;
+                    this.goldPerClick = 1;
+                    this.goldPerSecond = 1;
+
+                    this.updateOnClick = function () {
+                        this.currentGold += this.goldPerClick;
+                        $rootScope.$broadcast('current-gold-changed', {currentGold: this.currentGold});
+                    };
+
+                    this.updateOnSecond = (function (param) {
+                        return function () {
+                            param.currentGold += param.goldPerSecond;
+                            console.log("updateOnSecond", param);
+                            $rootScope.$broadcast('current-gold-changed', {currentGold: param.currentGold});
+                        };
+                    })(this);
+
+                    $interval(this.updateOnSecond, 1000);
+
+                    $scope.$on('GPC-upgraded', function (event, args) {
+                        var GPCup = args.goldPerClick;
+                        this.goldPerClick += GPCup;
+                    });
+
+                    $scope.$on('GPS-upgraded', function (event, args) {
+                        var GPSup = args.goldPerSecond;
+                        this.goldPerSecond += GPSup;
+                    });
+                }]
+
+        });
 
 
