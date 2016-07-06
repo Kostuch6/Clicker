@@ -29,10 +29,15 @@
   padding: 0;
 }
 
+.coin, .overview, .bList {
+    margin: 0 1.5% 24px 1.5%;
+}
+
 .coin {
-    position: relative;
+    float: left;
     width: 500px;
 }
+
 
 .gold {
     margin-left: 150px;
@@ -40,4 +45,9 @@
 
 .gps {
     margin-left: 150px;
+}
+
+.bList {
+    float: right;
+    
 }
