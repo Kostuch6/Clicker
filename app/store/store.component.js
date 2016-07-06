@@ -7,9 +7,9 @@
 angular.
     module('store').
         component('store', {
-           templateUrl: 'store.template.html',
-           controller: ['Buildings' ,
-               function StoreController(Buildings) {
+           templateUrl: 'store/store.template.html',
+           controller: ['Buildings', '$scope', '$rootScope',
+               function StoreController(Buildings, $scope, $rootScope) {
                 
                 this.buildings = Buildings.query();
                

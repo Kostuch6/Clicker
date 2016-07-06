@@ -16,16 +16,9 @@
 </head>
 <body>
 
-    <gold-mine></gold-mine>
-    <store></store>
-    
-
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="app.module.js"></script>
   <script src="gold-mine/gold-mine.module.js"></script>
   <script src="gold-mine/gold-mine.component.js"></script>
@@ -35,8 +28,14 @@
   <script src="store/store.component.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
+  <script src="core/core.module.js"></script>
+  <script src="core/building/building.module.js"></script>
+  <script src="core/building/building.service.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  
+    <gold-mine></gold-mine>
+    <store></store>
 </body>
 </html>

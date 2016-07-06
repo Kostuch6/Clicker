@@ -28,3 +28,16 @@
   content: "";
   padding: 0;
 }
+
+.coin {
+    position: relative;
+    width: 500px;
+}
+
+.gold {
+    margin-left: 150px;
+}
+
+.gps {
+    margin-left: 150px;
+}
