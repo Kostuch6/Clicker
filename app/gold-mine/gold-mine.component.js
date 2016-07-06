@@ -8,7 +8,7 @@ angular.
   module('goldMine').
     component('goldMine', {
         templateUrl: 'gold-mine/gold-mine.template.html',
-        controller: ['$scope', function GoldMineController($scope){
+        controller: ['$scope', '$rootScope', function GoldMineController($scope, $rootScope){
             this.currentGold = 0;
             this.goldPerClick = 1;
             this.goldPerSecond = 0;
