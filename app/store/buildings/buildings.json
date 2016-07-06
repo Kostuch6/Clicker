@@ -1,7 +1,7 @@
 [
     {
         "name": "Pickaxe",
-        "img": "img/pickaxe.png",
+        "img": "img/pickaxe.panel.png",
         "price": "20",
         "costUp": "5",
         "gpc": "1",
@@ -9,7 +9,7 @@
     },
     {
         "name": "Miner",
-        "img": "img/miner.png",
+        "img": "img/miner.panel.png",
         "price": "50",
         "costUp": "10",
         "gpc": "0",
