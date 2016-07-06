@@ -28,14 +28,13 @@ angular.
 
                     $interval(this.updateOnSecond, 1000);
 
-                    $scope.$on('GPC-upgraded', function (event, args) {
-                        var GPCup = args.goldPerClick;
+                    $scope.$on('income-upgraded', function (event, args) {
+                        var GPCup = args.gpcUp;
+                        var GPSup = args.gpsUp;
+                        var price = args.price;
                         this.goldPerClick += GPCup;
-                    });
-
-                    $scope.$on('GPS-upgraded', function (event, args) {
-                        var GPSup = args.goldPerSecond;
                         this.goldPerSecond += GPSup;
+                        this.currentGold -= price;
                     });
                 }]
 
