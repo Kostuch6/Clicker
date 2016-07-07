@@ -16,6 +16,7 @@ angular.
                     this.updateOnClick = function () {
                         this.currentGold += this.goldPerClick;
                         $rootScope.$broadcast('current-gold-changed', {currentGold: this.currentGold});
+                        $rootScope.$broadcast('add-to-abslute-gold', {addGold: this.goldPerClick});
                     };
 
                     this.updateOnSecond = (function (param) {
@@ -23,6 +24,7 @@ angular.
                             param.currentGold += param.goldPerSecond;
                             console.log("updateOnSecond", param);
                             $rootScope.$broadcast('current-gold-changed', {currentGold: param.currentGold});
+                            $rootScope.$broadcast('add-to-abslute-gold', {addGold: param.goldPerSecond});
                         };
                     })(this);
 

@@ -8,8 +8,21 @@ angular.
     module('overview').
         component('overview', {
             templateUrl: 'overview/overview.template.html',
-            controller: function OverviewController() {
+            controller:['$scope', function OverviewController($scope) {
+                this.absoluteGold;
+                this.timer;
+                this.upgradesBought = [];
                 
+                (function (param) {
+                    return $scope.$on('upgrade-bought', function(event, upgrade) {
+                    param.upgradesBought.push(upgrade);
+                });
+                })(this);
                 
-            }
+                (function (param) {
+                    return $scope.$on('add-to-abslute-gold', function(event, args) {
+                    param.absoluteGold += args.addGold;
+                });
+                })(this);
+            }]
 });

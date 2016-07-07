@@ -64,6 +64,7 @@ angular.
                     $rootScope.$broadcast('income-upgraded', temp);
                     this.buildings[upgrade.building].gpc *= upgrade.gpcMod;
                     this.buildings[upgrade.building].gps *= upgrade.gpsMod;
+                    $rootScope.$broadcast('upgrade-bought', upgrade);
                 };
              
                 (function (param) {
