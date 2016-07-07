@@ -9,7 +9,7 @@ angular.
         component('overview', {
             templateUrl: 'overview/overview.template.html',
             controller:['$scope', function OverviewController($scope) {
-                this.absoluteGold;
+                this.absoluteGold = 0;
                 this.timer;
                 this.upgradesBought = [];
                 
