@@ -61,3 +61,40 @@
   line-height: 0;
   opacity: 0;
 }
+
+.image { 
+   position: relative; 
+   width: 100%; 
+}
+
+.cost { 
+   position: absolute; 
+   top: 70px; 
+   right: 10px;
+   
+}
+
+.upCost {
+    position: absolute;
+    top: 75px;
+    left: 5px;
+}
+
+.cost, .upCost {
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    opacity: 0.7;
+}
+
+.number {
+    font-size: 50px;
+    font-weight: bold;
+    color: gray;
+    opacity: 0.7; 
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    opacity: 0.7;
+    
+}

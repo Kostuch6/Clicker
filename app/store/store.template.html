@@ -2,17 +2,21 @@
 <ul ng-repeat="upgrade in $ctrl.upgrades">
      <div class="animate-hide" ng-hide="upgrade.isUpgraded"> 
          <li>
-         
-             <p>Cost: {{ upgrade.price }} </p>
-            <img ng-src="{{upgrade.img}}" style="opacity:1" ng-click="$ctrl.buyUpgrade(upgrade)" >
+             <div class="image">
+                 <img ng-src="{{upgrade.img}}" style="opacity:1" ng-click="$ctrl.buyUpgrade(upgrade)">
+                 <p class="upCost">{{ upgrade.price }} </p>
+             </div>
        </li>
     </div>
  </ul>
      <ul ng-repeat="building in $ctrl.buildings ">
         <li>
-            <p>Cost: {{building.price }} </p>
-            <p>Number: {{ building.number }} </p>
-            <div class="err"><img ng-src="{{building.img}}" style="opacity:1" ng-click="building.isDisabled || $ctrl.buyBuilding(building)" ng-disabled="{{ building.isDisabled }}"></div>
+            
+            <div class="image">
+                <div class="err"><img ng-src="{{building.img}}" style="opacity:1" ng-click="building.isDisabled || $ctrl.buyBuilding(building)" ng-disabled="{{ building.isDisabled }}"></div>
+                <p class="cost"> {{building.price }} </p>
+                <p class="number"> {{ building.number }} </p>
+            </div>
         </li>
      </ul>
  </div>
