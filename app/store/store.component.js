@@ -13,26 +13,48 @@ angular.
                 this.currentGold =0;
                 this.buildings = Buildings.query();
                 
+                
                 this.buyBuilding = function(building) {
                     building.number += 1;
                     console.log("GPC, GPS, price", building.gpc, building.gps, building.price);
-                    //stats = {price: building.price, gpcUP: building.gpc, gpsUP: building.gps};
-                    //console.log("GPC, GPS, price", stats.gpc, stats.gps, stats.price);
+                    this.currentGold -= building.price;
                     $rootScope.$broadcast('income-upgraded', building);
-                };
-               
-                (function (param) {
-                    return $scope.$on('current-gold-changed', function(event, args) {
-                    param.currentGold = args.currentGold;
-                    for(i =0; i < param.buildings; i++)
+                    building.price = building.price + building.costUp;
+                    for(i = 0; i < this.buildings.length; i++)
                     {
-                        if(param.buildings[i].price < param.currentGold)
+                        if(this.buildings[i].price <= this.currentGold)
                         {
-                            buildings[i].isDisabled = false;
+                            this.buildings[i].isDisabled = false;
+                            console.log("Zmienilo na false");
                         }
                         else
                         {
-                            buildings[i].isDisabled = true;
+                            this.buildings[i].isDisabled = true;
+                            console.log("Zmienilo na true");
+                        }
+                    }
+                    //stats = {price: building.price, gpcUP: building.gpc, gpsUP: building.gps};
+                    //console.log("GPC, GPS, price", stats.gpc, stats.gps, stats.price);
+                    
+                    
+                };
+                
+            
+                   
+                (function (param) {
+                    return $scope.$on('current-gold-changed', function(event, args) {
+                    param.currentGold = args.currentGold;
+                    for(i = 0; i < param.buildings.length; i++)
+                    {
+                        if(param.buildings[i].price <= param.currentGold)
+                        {
+                            param.buildings[i].isDisabled = false;
+                            console.log("Zmienilo na false");
+                        }
+                        else
+                        {
+                            param.buildings[i].isDisabled = true;
+                            console.log("Zmienilo na true");
                         }
                     }
                     console.log("currGold", param.currentGold);
