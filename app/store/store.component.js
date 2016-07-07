@@ -24,6 +24,17 @@ angular.
                 (function (param) {
                     return $scope.$on('current-gold-changed', function(event, args) {
                     param.currentGold = args.currentGold;
+                    for(i =0; i < param.buildings; i++)
+                    {
+                        if(param.buildings[i].price < param.currentGold)
+                        {
+                            buildings[i].isDisabled = false;
+                        }
+                        else
+                        {
+                            buildings[i].isDisabled = true;
+                        }
+                    }
                     console.log("currGold", param.currentGold);
                 });
                 })(this);
