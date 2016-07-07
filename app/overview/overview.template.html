@@ -5,14 +5,18 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
  <div class="overview">
- <h3>Upgrades: </h3> </br>
-<ul ng-repeat="upgrade in $ctrl.upgradesBought">
+     <div class="upgrades" ng-show="$ctrl.upgradesBought.length">
+     <h3>Upgrades: </h3> </br>
+    <ul ng-repeat="upgrade in $ctrl.upgradesBought">
+        <div class="animate-hide" ng-hide="!upgrade.isUpgraded"> 
          <li class="box">
              <div class="image">
                  <img ng-src="{{upgrade.img}}" style="opacity:1" />
              </div>
-       </li>
-</ul> </br>
+         </li>
+        </div>
+     </div>
+</ul> </br></br></br></br></br></br>
      <h3>Timer: </h3></br>
      <h3>Absolute gold: </h3> {{ $ctrl.absoluteGold }}</br>
  </div>

@@ -39,8 +39,11 @@
 }
 
 .overview {
-    margin-left: 70px;
+    margin-left: 40px;
+    width: 450px;
 }
+
+
 
 .gold, .gps, .gpc {
     margin-left: 90px;
@@ -48,11 +51,8 @@
 
 .bList {
     float: right;
+    width: 450px;
     
-}
-
-.err {
-    background: gray;
 }
 
 .animate-hide {
@@ -107,7 +107,7 @@ ul {
 
 .box {
   float: left;
-  margin: 1em;
+  margin: 3px;
 }
 .after-box {
   clear: left;

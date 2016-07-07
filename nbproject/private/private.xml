@@ -3,24 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Staz/MineClicker/app/store/buildings/buildings.json</file>
-            <file>file:/C:/Staz/MineClicker/app/store/store.module.js</file>
-            <file>file:/C:/Staz/MineClicker/app/gold-mine/gold-mine.template.html</file>
+            <file>file:/C:/Staz/MineClicker/app/overview/overview.component.js</file>
             <file>file:/C:/Staz/MineClicker/app/app.css</file>
             <file>file:/C:/Staz/MineClicker/app/store/store.component.js</file>
             <file>file:/C:/Staz/MineClicker/app/store/store.template.html</file>
+            <file>file:/C:/Staz/MineClicker/app/img/gold-coin.png</file>
             <file>file:/C:/Staz/MineClicker/app/app.module.js</file>
+            <file>file:/C:/Staz/MineClicker/app/overview/overview.template.html</file>
             <file>file:/C:/Staz/MineClicker/app/index.html</file>
-=======
-            <file>file:/C:/Staz/angularTutorial/MineClicker/app/gold-mine/gold-mine.component.js</file>
-            <file>file:/C:/Staz/angularTutorial/MineClicker/app/store/store.component.js</file>
-            <file>file:/C:/Staz/angularTutorial/MineClicker/app/gold-mine/gold-mine.template.html</file>
-            <file>file:/C:/Staz/angularTutorial/MineClicker/app/index.html</file>
-            <file>file:/C:/Staz/angularTutorial/MineClicker/app/store/store.template.html</file>
-            <file>file:/C:/Staz/angularTutorial/MineClicker/app/gold-mine/gold-mine.module.js</file>
-            <file>file:/C:/Staz/angularTutorial/MineClicker/app/store/store.module.js</file>
->>>>>>> 3e1396e35383585b38580f76076efc8c415e8fcc
         </group>
     </open-files>
 </project-private>
