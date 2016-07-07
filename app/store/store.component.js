@@ -10,17 +10,27 @@ angular.
            templateUrl: 'store/store.template.html',
            controller: ['Buildings', '$scope', '$rootScope',
                function StoreController(Buildings, $scope, $rootScope) {
-                
+                this.currentGold =0;
                 this.buildings = Buildings.query();
                 
                 this.buyBuilding = function(building) {
                     building.number += 1;
-                    $rootScope.$broadcast('income-upgraded', {price: building.price}, {gpcUP: building.gpc}, {gpsUP: building.gps});
+                    console.log("GPC, GPS, price", building.gpc, building.gps, building.price);
+                    //stats = {price: building.price, gpcUP: building.gpc, gpsUP: building.gps};
+                    //console.log("GPC, GPS, price", stats.gpc, stats.gps, stats.price);
+                    $rootScope.$broadcast('income-upgraded', building);
                 };
                
-                $scope.$on('current-gold-changed', function(event, args) {
-                    var currentGold = args.currentGold;
+                (function (param) {
+                    return $scope.$on('current-gold-changed', function(event, args) {
+                    param.currentGold = args.currentGold;
+                    console.log("currGold", param.currentGold);
                 });
+                })(this);
+//                $scope.$on('current-gold-changed', function(event, args) {
+//                    this.currentGold = args.currentGold;
+//                    console.log("currGold", this.currentGold);
+//                });
                
                
            }
