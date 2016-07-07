@@ -95,10 +95,17 @@
     position: absolute;
     right: 10px;
     top: -10px;
-    opacity: 0.7;
-    
+    opacity: 0.7;  
 }
 
 ul {
      list-style-type: none;
+}
+
+.box {
+  float: left;
+  margin: 1em;
+}
+.after-box {
+  clear: left;
 }
