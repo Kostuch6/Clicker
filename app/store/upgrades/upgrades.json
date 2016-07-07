@@ -6,7 +6,8 @@
         "gpsMod": 0,
         "gpcMod": 2,
         "building": 0,
-        "isUpgraded": false
+        "isUpgraded": false,
+        "isDisabled": true
 
     },
     {
@@ -16,7 +17,7 @@
         "gpsMod": 3,
         "gpcMod": 0,
         "building": 1,
-        "isUpgraded": false
-        
+        "isUpgraded": false,
+        "isDisabled": true
     }
 ]

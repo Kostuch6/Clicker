@@ -3,7 +3,7 @@
      <div class="animate-hide" ng-hide="upgrade.isUpgraded"> 
          <li>
              <div class="image">
-                 <img ng-src="{{upgrade.img}}" style="opacity:1" ng-click="$ctrl.buyUpgrade(upgrade)">
+                 <img ng-src="{{upgrade.img}}" style="opacity:1" ng-click="upgrade.isDisabled ||$ctrl.buyUpgrade(upgrade)" ng-disabled="{{ upgrade.isDisabled }}"/>
                  <p class="upCost">{{ upgrade.price }} </p>
              </div>
        </li>
