@@ -35,12 +35,15 @@
 
 .coin, .overview{
     float: left;
-    width: 500px;
+    width: 400px;
 }
 
+.overview {
+    margin-left: 70px;
+}
 
 .gold, .gps, .gpc {
-    margin-left: 150px;
+    margin-left: 90px;
 }
 
 .bList {
