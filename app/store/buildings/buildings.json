@@ -6,7 +6,8 @@
         "costUp": 5,
         "gpc": 1,
         "gps": 0,
-        "number": 0
+        "number": 0,
+        "isDisabled": true
     },
     {
         "name": "Miner",
@@ -15,6 +16,7 @@
         "costUp": 10,
         "gpc": 0,
         "gps": 10,
-        "number": 0
+        "number": 0,
+        "isDisabled": true
     }
 ]

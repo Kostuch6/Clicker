@@ -2,8 +2,8 @@
      <p>Gold: {{$ctrl.currentGold }} </p>
    <ul>
         <li ng-repeat="building in $ctrl.buildings ">
-            <p>Cost: {{building.price}} </p>
+            <p>Cost: {{building.price + (building.number * building.costUp)}} </p>
             <p>Number: {{building.number }} </p>
-            <div class="err"><img ng-src="{{building.img}}" style="opacity:1" ng-click="$ctrl.buyBuilding(building)"></div>
+            <div class="err"><img ng-src="{{building.img}}" style="opacity:1" ng-disabled="{{building.isDisabled}}" ng-click="$ctrl.buyBuilding(building)"></div>
         </li>
  </div>
