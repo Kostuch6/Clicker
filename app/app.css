@@ -33,7 +33,7 @@
     margin: 0 1.5% 24px 1.5%;
 }
 
-.coin {
+.coin, .overview{
     float: left;
     width: 500px;
 }
