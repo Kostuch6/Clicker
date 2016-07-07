@@ -39,11 +39,7 @@
 }
 
 
-.gold {
-    margin-left: 150px;
-}
-
-.gps {
+.gold, .gps, .gpc {
     margin-left: 150px;
 }
 
@@ -54,4 +50,14 @@
 
 .err {
     background: gray;
+}
+
+.animate-hide {
+  transition: all linear 0.5s;
+  opacity: 1;
+}
+
+.animate-hide.ng-hide {
+  line-height: 0;
+  opacity: 0;
 }

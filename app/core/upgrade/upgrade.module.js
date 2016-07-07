@@ -3,6 +3,5 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-angular.module('core', ['core.building', 'core.upgrade']);
+angular.module('core.upgrade', ['ngResource']);
 

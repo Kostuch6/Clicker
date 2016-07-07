@@ -8,11 +8,12 @@ angular.
     module('store').
         component('store', {
            templateUrl: 'store/store.template.html',
-           controller: ['Buildings', '$scope', '$rootScope',
-               function StoreController(Buildings, $scope, $rootScope) {
+           controller: ['Buildings', 'Upgrades', '$scope', '$rootScope',
+               function StoreController(Buildings, Upgrades, $scope, $rootScope) {
                 this.currentGold =0;
                 this.buildings = Buildings.query();
-                
+                this.upgrades = Upgrades.query();
+                var temp = { };
                 
                 this.buyBuilding = function(building) {
                     building.number += 1;
@@ -35,10 +36,25 @@ angular.
                     }
                     //stats = {price: building.price, gpcUP: building.gpc, gpsUP: building.gps};
                     //console.log("GPC, GPS, price", stats.gpc, stats.gps, stats.price);
-                    
-                    
                 };
                 
+                this.buyUpgrade = function(upgrade) {
+                    upgrade.isUpgraded = true;
+                    console.log("upgrade", upgrade.isUpgraded);
+                    this.currentGold -= upgrade.price;
+                    console.log("numer", this.buildings[upgrade.building].number);
+                    console.log("gpc", this.buildings[upgrade.building].gpc);
+                    console.log("upgrade gpc", upgrade.gpcMod);
+                    var gpc = (this.buildings[upgrade.building].number * this.buildings[upgrade.building].gpc) * (upgrade.gpcMod - 1);
+                    console.log("gpcmod", gpc);
+                    var gps = (this.buildings[upgrade.building].number * this.buildings[upgrade.building].gps) * (upgrade.gpsMod - 1);
+                    console.log("gpsmod", gps);
+                    temp = { gpc : gpc, price : upgrade.price, gps : gps };
+                    console.log("chujnia", temp);
+                    $rootScope.$broadcast('income-upgraded', temp);
+                    this.buildings[upgrade.building].gpc *= upgrade.gpcMod;
+                    this.buildings[upgrade.building].gps *= upgrade.gpsMod;
+                };
             
                    
                 (function (param) {

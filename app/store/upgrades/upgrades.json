@@ -1,3 +1,22 @@
-{
-    "name": "Kostuch"
-}
+[
+    {
+        "name": "Pickaxe-upgrade",
+        "img": "img/pickaxe.upgrade.png",
+        "price": 10,
+        "gpsMod": 0,
+        "gpcMod": 2,
+        "building": 0,
+        "isUpgraded": false
+
+    },
+    {
+        "name": "Miner-upgrade",
+        "img": "img/miner.upgrade.png",
+        "price": 50,
+        "gpsMod": 3,
+        "gpcMod": 0,
+        "building": 1,
+        "isUpgraded": false
+        
+    }
+]
