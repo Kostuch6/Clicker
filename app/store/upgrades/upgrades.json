@@ -2,7 +2,7 @@
     {
         "name": "Pickaxe-upgrade",
         "img": "img/pickaxe.upgrade.png",
-        "price": 10,
+        "price": 100,
         "gpsMod": 0,
         "gpcMod": 2,
         "building": 0,
@@ -13,8 +13,18 @@
     {
         "name": "Miner-upgrade",
         "img": "img/miner.upgrade.png",
-        "price": 50,
+        "price": 500,
         "gpsMod": 3,
+        "gpcMod": 0,
+        "building": 1,
+        "isUpgraded": false,
+        "isDisabled": true
+    },
+    {
+        "name": "Miner2-upgrade",
+        "img": "img/miner2.upgrade.png",
+        "price": 1000,
+        "gpsMod": 5,
         "gpcMod": 0,
         "building": 1,
         "isUpgraded": false,
